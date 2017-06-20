@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="Front Task 1 from Clearcode">
+  <meta name="author" content="Patryk Rezler">
+	<style>
+
+body {
+    margin-top: 50px;
+}
+
+.tooltip {
+    position: relative;
+    border-bottom: 2px dotted #ff5722;
+}
+
+.tooltip:hover {
+    cursor: url(http://patrykrezler.pl/resources/cursor.png), auto;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 220px;
+	height: 28px;
+    background-color: #ff5722;
+    color: #fff;
+    text-align: left;
+    bottom: 160%;
+    left: 50%;
+    padding-top:10px;
+    padding-left: 10px;
+    margin-left: -115px;
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+	content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+    border-width: 10px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 13px solid #ff5722;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+</head>
+    <body>
+	    <p>This is an awesome <span class="tooltip">tooltip<span class="tooltiptext">It's so cool</span></span></p>
+    </body>
+</html>
